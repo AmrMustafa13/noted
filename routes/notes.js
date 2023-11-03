@@ -8,7 +8,11 @@ import {
   deleteNote,
 } from "../controllers/notes.js";
 
+import { requireAuth } from "../middlewares/requireAuth.js";
+
 const router = express.Router();
+
+router.use(requireAuth);
 
 router.route("/").get(getNotes).post(createNote);
 

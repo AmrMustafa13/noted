@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
+import cors from "cors";
 import notes from "./routes/notes.js";
 import users from "./routes/users.js";
 import { connectDB } from "./config/db.js";
@@ -13,6 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(cors());
 
 app.use("/api/v1/notes", notes);
 app.use("/api/v1/users", users);

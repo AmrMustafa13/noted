@@ -90,7 +90,7 @@ export const deleteNote = async (req, res) => {
         error: "No note found",
       });
     }
-    await note.remove();
+    await Note.findByIdAndDelete(req.params.id);
     res.status(200).json({
       success: true,
       data: {},

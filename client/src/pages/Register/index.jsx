@@ -19,7 +19,7 @@ const Register = () => {
       <form
         onSubmit={handleSubmit}
         ref={registerRef}
-        className="flex flex-col justify-center gap-4"
+        className="flex flex-col justify-center gap-4 container"
       >
         <input
           type="email"

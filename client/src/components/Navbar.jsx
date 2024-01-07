@@ -6,14 +6,12 @@ const Navbar = () => {
   const { user, logoutUser } = useAuth();
 
   return (
-    <nav className="flex justify-center items-center gap-4 py-4 bg-blue-500 text-white text-xl">
+    <nav className="flex justify-center items-center gap-4 py-4 bg-blue-500 text-white text-xl  rounded-es-3xl rounded-ee-3xl">
       {user ? (
         <>
           <Link to="/">Home</Link>
           <Link to="/notes">My Notes</Link>
-          <Link to="/login" onClick={logoutUser}>
-            Logout
-          </Link>
+          <button onClick={logoutUser}>Logout</button>
         </>
       ) : (
         <>

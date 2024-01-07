@@ -19,7 +19,7 @@ const Login = () => {
       <form
         onSubmit={handleSubmit}
         ref={loginRef}
-        className="flex flex-col justify-center gap-4"
+        className="flex flex-col justify-center gap-4 container"
       >
         <input
           type="email"

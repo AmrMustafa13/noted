@@ -4,6 +4,8 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Notes from "./pages/Notes";
+import CreateNote from "./pages/CreateNote";
+import UpdateNote from "./pages/UpdateNote";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "./contexts/auth";
@@ -26,6 +28,8 @@ const App = () => {
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
         <Route element={<PrivateRoutes />}>
           <Route path="/notes" element={<Notes />} />
+          <Route path="/notes/create" element={<CreateNote />} />
+          <Route path="/notes/update/:id" element={<UpdateNote />} />
         </Route>
       </Routes>
     </>
